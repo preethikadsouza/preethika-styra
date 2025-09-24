@@ -5,6 +5,6 @@ select 0,d.mat_serial_no from se_document a
 inner join se_document_material b on a.doc_rid=b.doc_rid
 inner join se_document_material_detail c on c.dm_rid=b.dm_rid
 inner join se_document_material_serial_no d on d.dmd_rid=c.dmd_rid
-where a.act_rid=490 and d.mat_serial_no in (upper($1))
+where a.act_rid=491 and d.mat_serial_no in (upper($1))
 $BODY$
   LANGUAGE 'sql' COST 100.0 SECURITY INVOKER
